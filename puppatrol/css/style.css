@@ -1,0 +1,249 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #f0f8ff; /* Light blue fallback */
+  margin: 0;
+  padding: 0 1rem;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Background image for main page only */
+.main-page {
+  background-image: url('/images/pawprint.jpg');
+  background-repeat: repeat; /* Repeat for pattern; change to 'no-repeat' for single image */
+  background-size: auto; /* Keeps original size; use 'cover' for full coverage */
+  background-position: center;
+  /* Optional: Add opacity overlay if image is too bright */
+  position: relative;
+}
+
+.main-page::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(240, 248, 255, 0.8); /* Semi-transparent overlay for readability */
+  z-index: -1;
+  pointer-events: none;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 0 1rem;
+  background-color: #4a90e2;
+  color: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  position: relative; /* Ensures header stays above background */
+  z-index: 1;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+h1 {
+  margin: 0;
+  font-size: 3rem;
+  letter-spacing: 2px;
+}
+
+.header-icon {
+  font-size: 2rem;
+  color: white;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background-color: rgba(255,255,255,0.2);
+  transition: background-color 0.3s ease;
+}
+
+.header-icon:hover {
+  background-color: rgba(255,255,255,0.3);
+}
+
+p {
+  margin: 0.5rem 0 0;
+  font-size: 1.2rem;
+}
+
+main {
+  flex-grow: 1;
+  max-width: 600px;
+  margin: 2rem auto;
+  text-align: center;
+  position: relative; /* Ensures content stays above background */
+  z-index: 1;
+}
+
+.pet-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-wrap: wrap;
+}
+
+button {
+  background-color: #4a90e2;
+  color: white;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin: 0.5rem;
+}
+
+button:hover {
+  background-color: #357ABD;
+}
+
+#fetchDogBtn {
+  background-color: #e74c3c;
+}
+
+#fetchDogBtn:hover {
+  background-color: #c0392b;
+}
+
+#fetchCatBtn {
+  background-color: #9b59b6;
+}
+
+#fetchCatBtn:hover {
+  background-color: #8e44ad;
+}
+
+.adopt-btn {
+  background-color: #27ae60;
+  font-size: 1.1rem;
+  padding: 0.8rem 1.5rem;
+  margin-top: 1rem;
+}
+
+.adopt-btn:hover {
+  background-color: #219a52;
+}
+
+.back-btn {
+  background-color: #95a5a6;
+}
+
+.back-btn:hover {
+  background-color: #7f8c8d;
+}
+
+#petInfo {
+  margin-top: 2rem;
+  background: white;
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+#petInfo img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+#petInfo h2 {
+  margin-top: 0;
+  font-size: 2rem;
+  color: #4a90e2;
+  text-align: center;
+}
+
+#petInfo p {
+  font-size: 1rem;
+  margin: 0.3rem 0;
+}
+
+.adopted-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1rem;
+  margin-top: 2rem;
+  text-align: left;
+}
+
+.adopted-pet {
+  background: white;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.adopted-pet.dog {
+  border-left: 4px solid #e74c3c;
+}
+
+.adopted-pet.cat {
+  border-left: 4px solid #9b59b6;
+}
+
+.adopted-pet img {
+  max-width: 100%;
+  border-radius: 10px;
+  margin-bottom: 0.5rem;
+}
+
+.adopted-pet h3 {
+  margin: 0 0 0.5rem;
+  color: #4a90e2;
+  font-size: 1.5rem;
+}
+
+.adopted-pet .type-icon {
+  font-size: 1.5rem;
+  margin-right: 0.5rem;
+}
+
+.adopted-pet p {
+  margin: 0.2rem 0;
+  font-size: 0.9rem;
+}
+
+#noAdoptions {
+  margin-top: 2rem;
+  background: white;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  color: #666;
+}
+
+.hidden {
+  display: none;
+}
+
+#error {
+  margin-top: 2rem;
+  color: red;
+  font-weight: bold;
+}
+
+footer {
+  text-align: center;
+  padding: 1rem 0;
+  background-color: #4a90e2;
+  color: white;
+  margin-top: auto;
+  position: relative; /* Ensures footer stays above background */
+  z-index: 1;
+}

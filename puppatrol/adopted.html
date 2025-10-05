@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Pup Patrol - My Adopted Pets</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="main-page">
+  <header>
+    <div class="header-content">
+      <h1>Pup Patrol</h1>
+      <a href="adopted.html" class="header-icon" title="View Adopted Pets">🐾</a>
+    </div>
+    <p>My Adopted Pets</p>
+  </header>
+
+  <main>
+    <button id="backToHomeBtn" class="back-btn">Back to Home</button>
+
+    <section id="adoptedPets" class="adopted-list">
+      <!-- Adopted pets will be populated here dynamically -->
+    </section>
+
+    <section id="noAdoptions" class="hidden">
+      <p>No pets adopted yet! Go back and find one to adopt.</p>
+    </section>
+
+    <section id="error" class="hidden"></section>
+  </main>
+
+  <footer>
+    <p>© 2024 Pup Patrol</p>
+  </footer>
+
+  <script src="js/adopt.js"></script>
+</body>
+</html>
