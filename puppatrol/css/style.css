@@ -4,7 +4,7 @@
 
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #f0f8ff; /* Light blue fallback */
+  background: #f0f8ff; 
   margin: 0;
   padding: 0 1rem;
   color: #333;
@@ -13,13 +13,12 @@ body {
   min-height: 100vh;
 }
 
-/* Background image for main page only */
+/* Background image */
 .main-page {
   background-image: url('/puppatrol/images/pawprint.jpg');
-  background-repeat: repeat; /* Repeat for pattern; change to 'no-repeat' for single image */
-  background-size: auto; /* Keeps original size; use 'cover' for full coverage */
+  background-repeat: repeat;
+  background-size: auto; 
   background-position: center;
-  /* Optional: Add opacity overlay if image is too bright */
   position: relative;
 }
 
@@ -30,7 +29,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(240, 248, 255, 0.8); /* Semi-transparent overlay for readability */
+  background: rgba(240, 248, 255, 0.8); 
   z-index: -1;
   pointer-events: none;
 }
@@ -41,7 +40,7 @@ header {
   background-color: #4a90e2;
   color: white;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  position: relative; /* Ensures header stays above background */
+  position: relative; 
   z-index: 1;
 }
 
@@ -83,7 +82,7 @@ main {
   max-width: 600px;
   margin: 2rem auto;
   text-align: center;
-  position: relative; /* Ensures content stays above background */
+  position: relative;
   z-index: 1;
 }
 
@@ -244,6 +243,6 @@ footer {
   background-color: #4a90e2;
   color: white;
   margin-top: auto;
-  position: relative; /* Ensures footer stays above background */
+  position: relative; 
   z-index: 1;
 }
