@@ -1,0 +1,11 @@
+{
+  "dogApi": {
+    "breedsUrl": "https://api.thedogapi.com/v1/breeds",
+    "imagesUrl": "https://api.thedogapi.com/v1/images/search"
+  },
+  "catApi": {
+    "breedsUrl": "https://api.thecatapi.com/v1/breeds",
+    "imagesUrl": "https://api.thecatapi.com/v1/images/search"
+  },
+  "localStorageKey": "adoptedPets"
+}
